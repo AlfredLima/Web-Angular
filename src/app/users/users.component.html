@@ -1,0 +1,9 @@
+<div class="container-snippets">
+  <div class="jumbotron text-center">
+  <h3 class="h3" > Lista de Usuários </h3>
+  </div>
+  <mat-card class="card-snippets" *ngFor = "let user of users">
+    <mat-card-header>
+      <mat-card-title> {{ user.publication }} {{ user.data | date :'short'  }} </mat-card-title>
+    </mat-card-header>
+  </mat-card> </div>

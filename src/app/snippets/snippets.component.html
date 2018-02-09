@@ -1,0 +1,27 @@
+<div class="container-snippets">
+  <mat-card class="card-snippets">
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <input [(ngModel)]="snippet.title" matInput placeholder="Title" value="" name="title">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input [(ngModel)]="snippet.language" matInput placeholder="Language" value="" name="language">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <textarea [(ngModel)]="snippet.code" matInput placeholder="Code" name="code"></textarea>
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="save()" >Save</button>
+  </form>
+  </mat-card>
+</div>
+
+
+<div class="container-snippets">
+<mat-card class="card-snippets" *ngFor = "let snippet of snipptes">
+  <mat-card-header>
+    <mat-card-title> {{ snippet.id }} - {{ snippet.title }}  </mat-card-title>
+    <mat-card-subtitle> {{ snippet.owner }} </mat-card-subtitle>
+  </mat-card-header>
+  {{ snippet.code }}
+</mat-card>
+</div>
